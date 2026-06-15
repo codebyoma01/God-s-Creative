@@ -14,9 +14,17 @@ function closeMenu() {
 }
 
 function switchMenuTab(cat, btn) {
-  document.querySelectorAll('.cat-section').forEach(s => s.classList.remove('active'));
-  document.getElementById('menu-' + cat).classList.add('active');
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  // hide all menu category sections
+  document.querySelectorAll('#page-menu .cat-section').forEach(s => {
+    s.classList.remove('active');
+    s.style.display = 'none';
+  });
+  // show the selected one
+  const target = document.getElementById('menu-' + cat);
+  target.classList.add('active');
+  target.style.display = 'grid';
+  // update tab button states scoped to menu tab bar only
+  document.querySelectorAll('#menuTabBar .tab-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
 }
 
