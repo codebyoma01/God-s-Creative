@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>God's Creative Events – Premium Event Planning & Catering | Aba & Umuahia</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ====================== NAVBAR ====================== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="showPage('home')">
+      <div class="nav-logo-img">
+        <img src="images/logo.png" alt="God's Creative Events Logo">
+      </div>
+      <div class="nav-logo-text">
+        <strong>God's Creative Events</strong>
+        <span>Event Planning &amp; Catering</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <button onclick="showPage('home')" class="active">Home</button>
+      <button onclick="showPage('about')">About</button>
+      <button onclick="showPage('services')">Services</button>
+      <button onclick="showPage('menu')">Menu</button>
+      <button onclick="showPage('gallery')">Gallery</button>
+      <button onclick="showPage('contact')">Contact</button>
+      <a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." class="btn btn-wa l-wa" target="_blank">WhatsApp Us</a>
+    </div>
+    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileNav">
+  <button onclick="showPage('home');closeMenu()">Home</button>
+  <button onclick="showPage('about');closeMenu()">About Us</button>
+  <button onclick="showPage('services');closeMenu()">Services</button>
+  <button onclick="showPage('menu');closeMenu()">Menu</button>
+  <button onclick="showPage('gallery');closeMenu()">Gallery</button>
+  <button onclick="showPage('contact');closeMenu()">Contact</button>
+  <a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." class="btn m-wa" target="_blank" onclick="closeMenu()">Chat on WhatsApp</a>
+</div>
+
+<!-- ====================== HOME PAGE ====================== -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="location-badge">📍 Aba &amp; Umuahia · Available Nationwide</div>
+      <div class="hero-badge">Premium Nigerian Event Specialists</div>
+      <h1>Creating Beautiful Events &amp;<br><em>Memorable Experiences</em></h1>
+      <p>From weddings and traditional ceremonies to premium Nigerian catering and corporate events  we bring your vision to life with elegance and creativity.</p>
+      <div class="hero-btns">
+        <button class="btn btn-primary" onclick="showPage('services')">View Services</button>
+        <button class="btn btn-outline-white" onclick="showPage('menu')">Explore Menu</button>
+        <a href="https://wa.me/2348065084101?text=Hello%2C%20I%27d%20like%20to%20discuss%20an%20upcoming%20event." class="btn btn-wa" target="_blank">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust">
+    <div class="trust-inner">
+      <div class="trust-item">
+        <h3>Professional Planning</h3>
+        <p>End-to-end event coordination tailored to your needs.</p>
+      </div>
+      <div class="trust-item">
+        <h3>Authentic Catering</h3>
+        <p>Premium Nigerian cuisine prepared with quality ingredients.</p>
+      </div>
+      <div class="trust-item">
+        <h3>Creative Styling</h3>
+        <p>Elegant décor, styling, and memorable event experiences.</p>
+      </div>
+      <div class="trust-item">
+        <h3>We Travel to You</h3>
+        <p>Serving Aba, Umuahia, Port Harcourt, Owerri, and beyond.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS WE DO -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="eyebrow">What We Do</span>
+        <h2>Events We Specialise In</h2>
+        <p>Whether intimate gatherings or grand celebrations, we deliver exceptional planning, catering, and event experiences.</p>
+        <div class="ornament"></div>
+      </div>
+      <div class="events-grid">
+
+        <div class="event-card">
+          <div class="ev-img">
+            <img src="images/events/wedding.jpg" alt="Wedding Event" loading="lazy">
+          </div>
+          <div class="ev-overlay">
+            <div class="ev-label">
+              Weddings
+              <span class="ev-sub">White, traditional &amp; court weddings</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="ev-img">
+            <img src="images/events/birthday.jpg" alt="Birthday Celebration" loading="lazy">
+          </div>
+          <div class="ev-overlay">
+            <div class="ev-label">
+              Birthdays
+              <span class="ev-sub">Memorable celebrations for all ages</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="ev-img">
+            <img src="images/events/corporate.jpg" alt="Corporate Event" loading="lazy">
+          </div>
+          <div class="ev-overlay">
+            <div class="ev-label">
+              Corporate Events
+              <span class="ev-sub">Conferences, dinners &amp; company events</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="ev-img">
+            <img src="images/events/traditional.jpg" alt="Traditional Ceremony" loading="lazy">
+          </div>
+          <div class="ev-overlay">
+            <div class="ev-label">
+              Traditional Ceremonies
+              <span class="ev-sub">Igbo and cultural celebrations</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOD PREVIEW -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="eyebrow">Our Food</span>
+        <h2>Authentic Nigerian Event Catering</h2>
+        <p>Every dish cooked fresh with quality ingredients. Rich soups, fragrant rice, grilled proteins and delectable small chops.</p>
+        <div class="ornament"></div>
+      </div>
+      <div class="food-grid">
+        <div class="food-card">
+          <div class="food-img">
+            <img src="images/menu/jollof-rice.jpg" alt="Jollof Rice">
+          </div>
+          <div class="food-body">
+            <h4>Party Jollof Rice</h4>
+            <p>Smoky, tomato-rich Nigerian party jollof  the heartbeat of every celebration</p>
+            <a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Jollof%20Rice%20for%20my%20event." class="btn btn-wa" target="_blank">Order Now</a>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-img">
+            <img src="images/menu/egusi-soup.jpg" alt="Egusi Soup">
+          </div>
+          <div class="food-body">
+            <h4>Egusi Soup</h4>
+            <p>Rich, hearty egusi with crayfish, assorted meat, fish and fresh greens</p>
+            <a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Egusi%20Soup." class="btn btn-wa" target="_blank">Order Now</a>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-img">
+            <img src="images/menu/small-chops.jpg" alt="Small Chops">
+          </div>
+          <div class="food-body">
+            <h4>Small Chops</h4>
+            <p>Puff puff, samosa, spring rolls, fish rolls &amp; asun  elegantly arranged trays</p>
+            <a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Small%20Chops." class="btn btn-wa" target="_blank">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-2">
+        <button class="btn btn-navy" onclick="showPage('menu')">View Full Menu →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="eyebrow">Client Reviews</span>
+        <h2>What Our Clients Say</h2>
+        <p>Real stories from real people who trusted us with their most important moments.</p>
+        <div class="ornament"></div>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <blockquote>"God's Creative Events made our wedding in Umuahia absolutely breathtaking. The jollof rice was the talk of the entire reception  every guest came back for seconds!"</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar">AN</div>
+            <div class="testi-info"><strong>Amaka Nwosu</strong><span>Wedding · Umuahia</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <blockquote>"The small chops trays at my daughter's birthday were incredible  perfectly arranged, generously filled, and served on time. I will use them again and again."</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar">CO</div>
+            <div class="testi-info"><strong>Chioma Okafor</strong><span>Birthday · Aba</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <blockquote>"They travelled to Enugu for our traditional ceremony and delivered everything flawlessly. The afang soup and native rice were absolutely authentic. Highly recommended!"</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar">EE</div>
+            <div class="testi-info"><strong>Emmanuel Eze</strong><span>Traditional Ceremony · Enugu</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOME CTA -->
+  <section class="cta-section">
+    <span class="eyebrow">Get In Touch</span>
+    <h2>Let's Make Your Event Special</h2>
+    <p>Based in Aba &amp; Umuahia  available to travel across Southeast Nigeria and beyond. Message us today on WhatsApp.</p>
+    <a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20plan%20an%20event%20with%20God%27s%20Creative%20Events." class="btn btn-wa" target="_blank" style="font-size:.95rem;padding:1rem 2rem">Chat on WhatsApp</a>
+  </section>
+
+</div><!-- /page-home -->
+
+<!-- ====================== ABOUT PAGE ====================== -->
+<div class="page" id="page-about">
+  <div class="page-hero">
+    <span class="eyebrow" style="color:var(--orange)">Our Story</span>
+    <h1>About God's Creative Events</h1>
+    <p>Passionate event planners and caterers from the heart of Southeast Nigeria  dedicated to turning your vision into beautiful reality.</p>
+    <div class="ornament"></div>
+  </div>
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="stat-grid">
+        <div class="stat-box"><strong>200+</strong><span>Events Delivered</span></div>
+        <div class="stat-box"><strong>8+</strong><span>Years Experience</span></div>
+        <div class="stat-box"><strong>2</strong><span>Branches (Aba &amp; Umuahia)</span></div>
+        <div class="stat-box"><strong>100%</strong><span>Client Satisfaction</span></div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="eyebrow">Who We Are</span>
+        <h2>Our Story</h2>
+        <div class="ornament"></div>
+      </div>
+      <p style="color:var(--text-muted);font-size:.925rem;line-height:1.9;max-width:680px;margin:0 auto 2rem;text-align:center">God's Creative Events was born from a deep passion for creating beautiful, meaningful experiences rooted in Nigerian culture. Based across Aba and Umuahia in Abia State, we have grown into one of Southeast Nigeria's most trusted event planning and catering companies. We have had the honour of serving weddings,
+         traditional Igbo ceremonies, corporate functions, and birthday celebrations  bringing the same dedication, creativity, and warmth to every single event. And when our clients need us further afield, we travel  because no event is too far when excellence is the standard.</p>
+      <div class="mv-grid">
+        <div class="mv-card mission">
+          <h3>Our Mission</h3>
+          <p>To deliver exceptional event planning and catering services rooted in authentic Nigerian culture  combining professional excellence with warm, personal service that makes every event uniquely memorable for our clients and their guests.</p>
+        </div>
+        <div class="mv-card vision">
+          <h3>Our Vision</h3>
+          <p>To be the most trusted and celebrated event planning and catering company in Southeast Nigeria  known for authenticity, creativity, reliability, and the ability to bring any vision to life with elegance and grace.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="eyebrow">Why Choose Us</span>
+        <h2>What Makes Us Different</h2>
+        <div class="ornament"></div>
+      </div>
+      <div class="why-grid">
+        <div class="why-card"><div class="why-num">1</div><div><h4>We Listen First</h4><p>Every event starts with a detailed conversation about your vision, budget, and expectations.</p></div></div>
+        <div class="why-card"><div class="why-num">2</div><div><h4>Authentic Nigerian Cuisine</h4><p>We cook the real thing  fresh ingredients, authentic recipes, and the right quantity for every event size.</p></div></div>
+        <div class="why-card"><div class="why-num">3</div><div><h4>We Travel to You</h4><p>Based in Aba and Umuahia, but we serve clients across the Southeast and beyond when needed.</p></div></div>
+        <div class="why-card"><div class="why-num">4</div><div><h4>Creative Decoration</h4><p>Our styling team transforms any venue into a stunning visual experience with bespoke décor.</p></div></div>
+        <div class="why-card"><div class="why-num">5</div><div><h4>Always On Time</h4><p>We value your schedule. Setup, service, and cleanup always happen exactly when promised.</p></div></div>
+        <div class="why-card"><div class="why-num">6</div><div><h4>Transparent Pricing</h4><p>No hidden charges. All costs are discussed and agreed before we begin, with no surprises.</p></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="cta-section">
+    <span class="eyebrow">Let's Connect</span>
+    <h2>Ready to Start Planning?</h2>
+    <p>Reach out today on WhatsApp and let's start building your perfect event together.</p>
+    <a href="https://wa.me/2348065084101?text=Hello%2C%20I%27d%20love%20to%20learn%20more%20about%20God%27s%20Creative%20Events." class="btn btn-wa" target="_blank" style="font-size:.95rem;padding:1rem 2rem">Chat on WhatsApp</a>
+  </section>
+</div>
+
+<!-- ====================== SERVICES PAGE ====================== -->
+<div class="page" id="page-services">
+  <div class="page-hero">
+    <span class="eyebrow" style="color:var(--orange)">What We Offer</span>
+    <h1>Our Food Services</h1>
+    <p>Authentic Nigerian event catering  freshly prepared, generously served, and made to impress every guest at your table.</p>
+    <div class="ornament"></div>
+  </div>
+  <section class="section">
+    <div class="section-inner">
+      <div class="svc-page-grid">
+
+        <!-- RICE DISHES -->
+        <div class="svc-page-card">
+          <div class="svc-page-img">
+            <img src="images/menu/jollof-rice.jpg" alt="Rice Dishes">
+          </div>
+          <div class="svc-page-top"><h3>Rice Dishes</h3><p>The backbone of every Nigerian event  smoky, rich and satisfying</p></div>
+          <div class="svc-page-body">
+            <ul class="feat-list">
+              <li>Party Jollof Rice (firewood-cooked)</li>
+              <li>Fried Rice with mixed vegetables</li>
+              <li>Native Rice with Bonga Fish</li>
+              <li>White Rice &amp; Tomato Stew</li>
+              <li>Served in trays or per-plate portions</li>
+              <li>Available for any event size</li>
+            </ul>
+            <a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Rice%20Dishes%20for%20my%20event." class="btn btn-wa" target="_blank" style="width:100%">Order on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- SOUPS -->
+        <div class="svc-page-card">
+          <div class="svc-page-img">
+            <img src="images/menu/egusi-soup.jpg" alt="Nigerian Soups">
+          </div>
+          <div class="svc-page-top"><h3>Nigerian Soups</h3><p>Rich, authentic soups prepared fresh for every occasion</p></div>
+          <div class="svc-page-body">
+            <ul class="feat-list">
+              <li>Egusi Soup with assorted meat &amp; fish</li>
+              <li>Afang Soup with periwinkle &amp; seafood</li>
+              <li>Oha Soup (traditional Igbo)</li>
+              <li>Banga Soup (Delta-style)</li>
+              <li>Seafood Okra</li>
+              <li>White Soup (Ofe Onugbu)</li>
+            </ul>
+            <a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Soups%20for%20my%20event." class="btn btn-wa" target="_blank" style="width:100%">Order on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- TRADITIONAL MEALS -->
+        <div class="svc-page-card">
+          <div class="svc-page-img">
+            <img src="images/menu/moi-moi.jpg" alt="Traditional Meals">
+          </div>
+          <div class="svc-page-top"><h3>Traditional Meals</h3><p>Classic Nigerian dishes that feel like home at every event</p></div>
+          <div class="svc-page-body">
+            <ul class="feat-list">
+              <li>Boiled Yam &amp; Egg Sauce</li>
+              <li>Plantain Porridge with fish</li>
+              <li>Moi Moi (steamed bean pudding)</li>
+              <li>Perfect for traditional ceremonies</li>
+              <li>Cooked fresh on the day</li>
+              <li>Served hot &amp; in generous portions</li>
+            </ul>
+            <a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Traditional%20Meals%20for%20my%20event." class="btn btn-wa" target="_blank" style="width:100%">Order on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- PROTEINS -->
+        <div class="svc-page-card">
+          <div class="svc-page-img">
+            <img src="images/menu/chicken.jpg" alt="Proteins">
+          </div>
+          <div class="svc-page-top"><h3>Proteins &amp; Meats</h3><p>Well seasoned, perfectly grilled event proteins for every guest</p></div>
+          <div class="svc-page-body">
+            <ul class="feat-list">
+              <li>Chicken  grilled or fried</li>
+              <li>Turkey  marinated &amp; roasted</li>
+              <li>Goat Meat Asun (peppered)</li>
+              <li>Fish  grilled or peppered stew</li>
+              <li>Served whole or in portions</li>
+              <li>Available as trays or individual plates</li>
+            </ul>
+            <a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Proteins%20for%20my%20event." class="btn btn-wa" target="_blank" style="width:100%">Order on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- SIDES & EXTRAS -->
+        <div class="svc-page-card">
+          <div class="svc-page-img">
+            <img src="images/menu/fried-plantain.jpg" alt="Sides and Extras">
+          </div>
+          <div class="svc-page-top"><h3>Sides &amp; Extras</h3><p>The finishing touches that make every food tray complete</p></div>
+          <div class="svc-page-body">
+            <ul class="feat-list">
+              <li>Fried Plantain (Dodo)</li>
+              <li>Nigerian Party Salad</li>
+              <li>Moi Moi &amp; Coleslaw</li>
+              <li>Served alongside main dishes</li>
+              <li>Available in bulk trays</li>
+              <li>Freshly prepared on event day</li>
+            </ul>
+            <a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Sides%20and%20Extras%20for%20my%20event." class="btn btn-wa" target="_blank" style="width:100%">Order on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- SMALL CHOPS -->
+        <div class="svc-page-card">
+          <div class="svc-page-img">
+            <img src="images/menu/small-chops.jpg" alt="Small Chops">
+          </div>
+          <div class="svc-page-top"><h3>Small Chops Platters</h3><p>Elegant finger food trays  always the first to finish at any event</p></div>
+          <div class="svc-page-body">
+            <ul class="feat-list">
+              <li>Puff Puff</li>
+              <li>Samosa &amp; Spring Rolls</li>
+              <li>Fish Rolls</li>
+              <li>Peppered Gizzard</li>
+              <li>Elegantly arranged on trays</li>
+              <li>Perfect for cocktail hours &amp; receptions</li>
+            </ul>
+            <a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Small%20Chops%20for%20my%20event." class="btn btn-wa" target="_blank" style="width:100%">Order on WhatsApp</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="cta-section">
+    <span class="eyebrow">Book Now</span>
+    <h2>Let's Feed Your Guests Right</h2>
+    <p>Chat with us on WhatsApp to discuss your menu, event size, and get a custom catering quote.</p>
+    <a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20book%20catering%20for%20my%20event." class="btn btn-wa" target="_blank" style="font-size:.95rem;padding:1rem 2rem">Chat on WhatsApp</a>
+  </section>
+</div>
+
+<!-- ====================== MENU PAGE ====================== -->
+<div class="page" id="page-menu">
+  <div class="page-hero">
+    <span class="eyebrow" style="color:var(--orange)">Our Catering Menu</span>
+    <h1>Authentic Nigerian Event Food</h1>
+    <p>Every dish freshly prepared  rich soups, smoky rice, grilled proteins, and beautiful small chops platters.</p>
+    <div class="ornament"></div>
+  </div>
+
+  <section class="section">
+    <div class="section-inner">
+
+      <div class="tab-bar" id="menuTabBar">
+        <button class="tab-btn active" onclick="switchMenuTab('rice',this)">Rice Dishes</button>
+        <button class="tab-btn" onclick="switchMenuTab('soups',this)">Soups</button>
+        <button class="tab-btn" onclick="switchMenuTab('traditional',this)">Traditional Meals</button>
+        <button class="tab-btn" onclick="switchMenuTab('proteins',this)">Proteins</button>
+        <button class="tab-btn" onclick="switchMenuTab('extras',this)">Sides &amp; Extras</button>
+      </div>
+
+      <!-- RICE DISHES -->
+      <div class="cat-section active food-grid" id="menu-rice">
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/jollof-rice.jpg" alt="Jollof Rice"></div>
+          <div class="food-body"><h4>Party Jollof Rice</h4><p>Smoky, tomato rich Nigerian party jollof  cooked over firewood for that authentic flavour</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Jollof%20Rice." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/fried-rice.jpg" alt="Fried Rice"></div>
+          <div class="food-body"><h4>Fried Rice</h4><p>Colourful event fried rice with mixed vegetables, liver and seasoned to perfection</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Fried%20Rice." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/native-rice.jpg" alt="Native Rice"></div>
+          <div class="food-body"><h4>Native Rice with Bonga Fish</h4><p>Rich, smoky ofada style native rice cooked in palm oil with bonga fish and crayfish</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Native%20Rice." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/white-rice-stew.jpg" alt="White Rice and Stew"></div>
+          <div class="food-body"><h4>White Rice &amp; Tomato Stew</h4><p>Perfectly cooked parboiled rice with our signature rich tomato &amp; pepper stew</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20White%20Rice%20and%20Stew." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+      </div>
+
+      <!-- SOUPS -->
+      <div class="cat-section food-grid" id="menu-soups">
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/egusi-soup.jpg" alt="Egusi Soup"></div>
+          <div class="food-body"><h4>Egusi Soup</h4><p>Hearty ground melon seed soup with crayfish, stockfish, assorted meat and fresh greens</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Egusi%20Soup." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/afang-soup.jpg" alt="Afang Soup"></div>
+          <div class="food-body"><h4>Afang Soup</h4><p>Efik delicacy made with fresh afang leaves, waterleaf, periwinkle and assorted seafood</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Afang%20Soup." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/oha-soup.jpg" alt="Oha Soup"></div>
+          <div class="food-body"><h4>Oha Soup</h4><p>Traditional Igbo oha soup with cocoyam thickener, oha leaves, stockfish and assorted meat</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Oha%20Soup." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/banga-soup.jpg" alt="Banga Soup"></div>
+          <div class="food-body"><h4>Banga Soup</h4><p>Delta-style palm nut soup rich with spices, crayfish, and your choice of meat or seafood</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Banga%20Soup." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/seafood-okra.jpg" alt="Seafood Okra"></div>
+          <div class="food-body"><h4>Seafood Okra</h4><p>Luscious draw soup loaded with fresh prawns, crab, fish and assorted seafood</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Seafood%20Okra." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/white-soup.jpg" alt="White Soup"></div>
+          <div class="food-body"><h4>White Soup (Ofe Onugbu)</h4><p>Delicate, flavourful Igbo white soup with cocoyam, ukpaka and assorted proteins</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20White%20Soup." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+      </div>
+
+      <!-- TRADITIONAL MEALS -->
+      <div class="cat-section food-grid" id="menu-traditional">
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/yam-egg-sauce.jpg" alt="Boiled Yam and Egg Sauce"></div>
+          <div class="food-body"><h4>Boiled Yam &amp; Egg Sauce</h4><p>Soft, fluffy boiled yam served with rich peppered egg sauce  a breakfast &amp; event favourite</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Boiled%20Yam%20and%20Egg%20Sauce." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/plantain-porridge.jpg" alt="Plantain Porridge"></div>
+          <div class="food-body"><h4>Plantain Porridge</h4><p>Hearty unripe plantain porridge cooked with fish, crayfish and assorted vegetables</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Plantain%20Porridge." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/moi-moi.jpg" alt="Moi Moi"></div>
+          <div class="food-body"><h4>Moi Moi</h4><p>Steamed bean pudding with egg, fish and peppers  a Nigerian event classic, made the right way</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Moi%20Moi." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+      </div>
+
+      <!-- PROTEINS -->
+      <div class="cat-section food-grid" id="menu-proteins">
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/chicken.jpg" alt="Chicken"></div>
+          <div class="food-body"><h4>Chicken (Grilled / Fried)</h4><p>Well-seasoned, peppered chicken  grilled or fried, served whole or in pieces for events</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Chicken." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/turkey.jpg" alt="Turkey"></div>
+          <div class="food-body"><h4>Turkey</h4><p>Premium event turkey  perfectly marinated and grilled to golden perfection</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Turkey." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/goat-meat.jpg" alt="Goat Meat Asun"></div>
+          <div class="food-body"><h4>Goat Meat (Asun)</h4><p>Smoky, spicy peppered goat meat  a premium event protein loved by all guests</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Goat%20Meat%20Asun." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/fish.jpg" alt="Fish"></div>
+          <div class="food-body"><h4>Fish (Grilled / Peppered)</h4><p>Fresh whole fish  grilled or stewed in rich pepper sauce for events and food trays</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Fish." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+      </div>
+
+      <!-- SIDES & EXTRAS -->
+      <div class="cat-section food-grid" id="menu-extras">
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/fried-plantain.jpg" alt="Fried Plantain"></div>
+          <div class="food-body"><h4>Fried Plantain (Dodo)</h4><p>Sweet, golden fried plantain  a beloved Nigerian side that disappears from every event tray</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Fried%20Plantain." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/salad.jpg" alt="Nigerian Party Salad"></div>
+          <div class="food-body"><h4>Nigerian Party Salad</h4><p>Richly dressed Nigerian coleslaw-style salad with vegetables, cream and a boiled egg garnish</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Party%20Salad." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/small-chops.jpg" alt="Small Chops"></div>
+          <div class="food-body"><h4>Small Chops Platter</h4><p>Puff puff, samosa, spring rolls, fish rolls &amp; peppered gizzard  elegantly trayed</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Small%20Chops." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+      </div>
+
+      <div class="text-center mt-2" style="padding:1.5rem 0;border-top:1px solid var(--border);margin-top:1rem">
+        <p style="color:var(--text-muted);font-size:.875rem;margin-bottom:1rem">Don't see what you need? We can prepare many more dishes on request.</p>
+        <a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20custom%20catering%20menu." class="btn btn-navy" target="_blank">Ask About Custom Orders</a>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ====================== GALLERY PAGE ====================== -->
+<div class="page" id="page-gallery">
+  <div class="page-hero">
+    <span class="eyebrow" style="color:var(--orange)">Our Portfolio</span>
+    <h1>Event Gallery</h1>
+    <p>A showcase of the beautiful events and experiences we've created for our clients.</p>
+    <div class="ornament"></div>
+  </div>
+  <section class="section">
+    <div class="section-inner">
+      <div class="tab-bar">
+        <button class="tab-btn active">All Events</button>
+        <button class="tab-btn">Weddings</button>
+        <button class="tab-btn">Birthdays</button>
+        <button class="tab-btn">Corporate</button>
+        <button class="tab-btn">Catering</button>
+        <button class="tab-btn">Decorations</button>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/gallery/gallery1.jpg" alt="Wedding Event - Umuahia">
+          <div class="gallery-overlay"><span>Wedding · Umuahia</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery2.jpg" alt="Birthday Celebration - Aba">
+          <div class="gallery-overlay"><span>Birthday · Aba</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery3.jpg" alt="Catering Setup">
+          <div class="gallery-overlay"><span>Catering Setup</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery4.jpg" alt="Traditional Ceremony">
+          <div class="gallery-overlay"><span>Traditional Ceremony</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery5.jpg" alt="Corporate Event">
+          <div class="gallery-overlay"><span>Corporate Event</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery6.jpg" alt="Wedding Decoration">
+          <div class="gallery-overlay"><span>Decoration · Wedding</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery7.jpg" alt="Birthday Decoration">
+          <div class="gallery-overlay"><span>Birthday Decoration</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery8.jpg" alt="Food Display">
+          <div class="gallery-overlay"><span>Food Display</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery/gallery9.jpg" alt="Hall Styling">
+          <div class="gallery-overlay"><span>Hall Styling</span></div>
+        </div>
+      </div>
+      <div class="text-center mt-2">
+        <p style="color:var(--text-muted);font-size:.875rem;margin-bottom:1rem">Want to see more of our work? We'll send you our full photo portfolio on WhatsApp.</p>
+        <a href="https://wa.me/2348065084101?text=Hello%2C%20please%20send%20me%20your%20full%20event%20portfolio." class="btn btn-navy" target="_blank">Request Full Portfolio</a>
+      </div>
+    </div>
+  </section>
+  <section class="cta-section">
+    <span class="eyebrow">Book Us</span>
+    <h2>Let's Create Something Beautiful Together</h2>
+    <p>Your event deserves to look this good. Reach out today to get started.</p>
+    <a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20book%20God%27s%20Creative%20Events." class="btn btn-wa" target="_blank" style="font-size:.95rem;padding:1rem 2rem">Chat on WhatsApp</a>
+  </section>
+</div>
+
+<!-- ====================== CONTACT PAGE ====================== -->
+<div class="page" id="page-contact">
+  <div class="page-hero">
+    <span class="eyebrow" style="color:var(--orange)">Reach Out</span>
+    <h1>Contact Us</h1>
+    <p>We're based in Aba &amp; Umuahia and happy to travel. Message us today  we respond quickly on WhatsApp.</p>
+    <div class="ornament"></div>
+  </div>
+  <section class="section">
+    <div class="section-inner">
+      <div class="contact-grid">
+
+        <div class="contact-form-card">
+          <h3>Send Us a Message</h3>
+          <p class="sub">Fill in your details below  we'll open WhatsApp with your message pre-filled and ready to send.</p>
+          <div class="form-group"><label>Your Full Name *</label><input type="text" id="cf-name" placeholder="Enter your full name"></div>
+          <div class="form-group"><label>Phone Number *</label><input type="tel" id="cf-phone" placeholder="e.g. 08065084101"></div>
+          <div class="form-group"><label>Event Type</label>
+            <select id="cf-event">
+              <option value="">Select event type</option>
+              <option>Wedding</option>
+              <option>Birthday Party</option>
+              <option>Corporate Event</option>
+              <option>Traditional Ceremony</option>
+              <option>Catering Only</option>
+              <option>Decoration Only</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Your Message</label><textarea id="cf-message" placeholder="Tell us about your event — date, location, number of guests, and any special requirements..."></textarea></div>
+          <button class="btn btn-wa" style="width:100%;font-size:.9rem;padding:.9rem" onclick="sendToWhatsApp()">Send via WhatsApp</button>
+        </div>
+
+        <div>
+          <div class="contact-info-card">
+            <h3>Get In Touch</h3>
+            <div class="ci-item">
+              <div class="ci-icon"><span>📞</span></div>
+              <div class="ci-info"><strong>Phone &amp; WhatsApp</strong><p>+234 806 508 4101</p></div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon"><span>📍</span></div>
+              <div class="ci-info"><strong>Branch Locations</strong><p>Aba, Abia State<br>Umuahia, Abia State</p></div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon"><span>✈️</span></div>
+              <div class="ci-info"><strong>We Travel</strong><p>Available across Southeast Nigeria and beyond  just ask!</p></div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon"><span>⏰</span></div>
+              <div class="ci-info"><strong>Response Time</strong><p>We typically respond within a few hours on WhatsApp</p></div>
+            </div>
+          </div>
+          <div class="wa-card">
+            <p>The fastest way to reach us is on WhatsApp. Send us your event details and we'll respond with a quote and availability.</p>
+            <a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20plan%20an%20event%20with%20God%27s%20Creative%20Events." class="btn btn-wa" target="_blank">Chat on WhatsApp Now</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ====================== FOOTER ====================== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div style="font-family:'Playfair Display',serif;font-size:1.05rem;color:white;font-weight:700;margin-bottom:.15rem">God's Creative Events</div>
+        <div style="font-size:.7rem;color:var(--orange);margin-bottom:.75rem;text-transform:uppercase;letter-spacing:.08em;font-weight:600">Event Planning &amp; Catering</div>
+        <p>Creating beautiful, memorable events across Aba, Umuahia, and beyond. Authentic Nigerian catering and professional event planning  delivered with heart.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <button onclick="showPage('services')">Wedding Planning</button>
+        <button onclick="showPage('services')">Birthday Parties</button>
+        <button onclick="showPage('services')">Corporate Events</button>
+        <button onclick="showPage('services')">Traditional Ceremonies</button>
+        <button onclick="showPage('services')">Event Decoration</button>
+        <button onclick="showPage('services')">Catering Services</button>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+2348065084101">+234 806 508 4101</a>
+        <a href="https://wa.me/2348065084101" target="_blank">WhatsApp Us</a>
+        <a href="#">Aba, Abia State</a>
+        <a href="#">Umuahia, Abia State</a>
+        <a href="#" style="color:rgba(255,255,255,.4);font-size:.75rem;margin-top:.25rem">We travel across Nigeria</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 God's Creative Events. All rights reserved.</p>
+      <p>Aba &amp; Umuahia, Abia State, Nigeria</p>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." class="wa-float" target="_blank" aria-label="Chat on WhatsApp">
+  <div class="wa-pulse"></div>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
