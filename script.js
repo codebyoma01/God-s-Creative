@@ -1,8 +1,12 @@
 function showPage(name) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(function(p) {
+    p.classList.remove('active');
+  });
   document.getElementById('page-' + name).classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
-  document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.nav-links button').forEach(function(b) {
+    b.classList.remove('active');
+  });
 }
 
 function toggleMenu() {
@@ -14,35 +18,36 @@ function closeMenu() {
 }
 
 function switchMenuTab(cat, btn) {
-  // hide all menu category sections
-  document.querySelectorAll('#page-menu .cat-section').forEach(s => {
+  // remove active from all cat-sections
+  document.querySelectorAll('#page-menu .cat-section').forEach(function(s) {
     s.classList.remove('active');
-    s.style.display = 'none';
   });
-  // show the selected one
-  const target = document.getElementById('menu-' + cat);
-  target.classList.add('active');
-  target.style.display = 'grid';
-  // update tab button states scoped to menu tab bar only
-  document.querySelectorAll('#menuTabBar .tab-btn').forEach(b => b.classList.remove('active'));
+  // add active to selected one
+  var target = document.getElementById('menu-' + cat);
+  if (target) {
+    target.classList.add('active');
+  }
+  // update tab buttons
+  document.querySelectorAll('#menuTabBar .tab-btn').forEach(function(b) {
+    b.classList.remove('active');
+  });
   btn.classList.add('active');
 }
 
 function sendToWhatsApp() {
-  const name = document.getElementById('cf-name').value.trim();
-  const phone = document.getElementById('cf-phone').value.trim();
-  const evt = document.getElementById('cf-event').value;
-  const msg = document.getElementById('cf-message').value.trim();
+  var name = document.getElementById('cf-name').value.trim();
+  var phone = document.getElementById('cf-phone').value.trim();
+  var evt = document.getElementById('cf-event').value;
+  var msg = document.getElementById('cf-message').value.trim();
   if (!name) { alert('Please enter your name.'); return; }
-  const text = `Hello God's Creative Events! 👋\n\nName: ${name}\nPhone: ${phone || 'Not provided'}\nEvent Type: ${evt || 'Not specified'}\n\nMessage:\n${msg || 'I would like to enquire about your services.'}`;
+  var text = "Hello God's Creative Events!\n\nName: " + name + "\nPhone: " + (phone || 'Not provided') + "\nEvent Type: " + (evt || 'Not specified') + "\n\nMessage:\n" + (msg || 'I would like to enquire about your services.');
   window.open('https://wa.me/2348065084101?text=' + encodeURIComponent(text), '_blank');
 }
 
-// Close mobile menu when clicking outside
-document.addEventListener('click', function (e) {
-  const nav = document.getElementById('mobileNav');
-  const hamburger = document.querySelector('.nav-hamburger');
-  if (nav.classList.contains('open') && !nav.contains(e.target) && !hamburger.contains(e.target)) {
+document.addEventListener('click', function(e) {
+  var nav = document.getElementById('mobileNav');
+  var hamburger = document.querySelector('.nav-hamburger');
+  if (nav && nav.classList.contains('open') && !nav.contains(e.target) && !hamburger.contains(e.target)) {
     closeMenu();
   }
 });
