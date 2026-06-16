@@ -34,6 +34,20 @@ function switchMenuTab(cat, btn) {
   btn.classList.add('active');
 }
 
+function filterGallery(cat, btn) {
+  document.querySelectorAll('#galleryGrid .gallery-item').forEach(function(item) {
+    if (cat === 'all' || item.getAttribute('data-cat') === cat) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+  document.querySelectorAll('#galleryTabBar .tab-btn').forEach(function(b) {
+    b.classList.remove('active');
+  });
+  btn.classList.add('active');
+}
+
 function sendToWhatsApp() {
   var name = document.getElementById('cf-name').value.trim();
   var phone = document.getElementById('cf-phone').value.trim();

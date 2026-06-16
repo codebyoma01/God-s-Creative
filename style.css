@@ -265,3 +265,34 @@ footer{background:#071c40;padding:3rem 1.25rem 1.5rem}
 .mt-1{margin-top:1rem}
 .mt-2{margin-top:2rem}
 .divider{height:1px;background:var(--border);margin:2rem 0}
+
+/* ===== POWERED BY BADGE (HERO) ===== */
+.powered-badge{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);font-size:.78rem;padding:.5rem 1.1rem;border-radius:100px;margin-bottom:1.5rem;letter-spacing:.01em}
+.powered-badge strong{color:var(--orange)}
+
+/* ===== DELIVERY GRID (HOME) ===== */
+.delivery-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:560px){.delivery-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.delivery-grid{grid-template-columns:repeat(3,1fr)}}
+.delivery-card{background:white;border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;text-align:center;transition:box-shadow .2s,transform .2s}
+.delivery-card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+.delivery-icon{font-size:2.2rem;margin-bottom:.75rem}
+.delivery-card h4{font-family:'Playfair Display',serif;font-size:1rem;color:var(--navy);margin-bottom:.4rem}
+.delivery-card p{font-size:.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.6}
+.delivery-cta-box{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;background:var(--navy);border-radius:var(--radius);padding:1.5rem 2rem;margin-top:2rem}
+.delivery-cta-box strong{display:block;color:white;font-size:1rem;margin-bottom:.25rem}
+.delivery-cta-box p{color:rgba(255,255,255,.65);font-size:.82rem;margin:0}
+@media(max-width:600px){.delivery-cta-box{text-align:center;justify-content:center}}
+
+/* ===== KITCHEN INTRO (ABOUT) ===== */
+.kitchen-intro{background:var(--navy);border-radius:var(--radius);padding:2rem;margin-bottom:.5rem}
+.kitchen-intro p{color:rgba(255,255,255,.8);font-size:.925rem;line-height:1.9;margin:0}
+
+/* ===== SERVICES DIVISION HEADERS ===== */
+.division-header{text-align:center;margin-bottom:1.75rem}
+.division-label{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.4rem 1.1rem;border-radius:100px;margin-bottom:.75rem}
+.events-label{background:rgba(11,42,99,.1);color:var(--navy);border:1px solid rgba(11,42,99,.2)}
+.kitchen-label{background:rgba(245,130,32,.12);color:var(--orange);border:1px solid rgba(245,130,32,.3)}
+.division-header h2{font-size:clamp(1.5rem,3.5vw,2.1rem);color:var(--navy);margin-bottom:.5rem}
+.division-header p{color:var(--text-muted);max-width:540px;margin:0 auto;font-size:.875rem}
+.division-divider{height:2px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:3rem 0}
