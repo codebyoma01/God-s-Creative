@@ -18,16 +18,13 @@ function closeMenu() {
 }
 
 function switchMenuTab(cat, btn) {
-  // remove active from all cat-sections
   document.querySelectorAll('#page-menu .cat-section').forEach(function(s) {
     s.classList.remove('active');
   });
-  // add active to selected one
   var target = document.getElementById('menu-' + cat);
   if (target) {
     target.classList.add('active');
   }
-  // update tab buttons
   document.querySelectorAll('#menuTabBar .tab-btn').forEach(function(b) {
     b.classList.remove('active');
   });
@@ -65,3 +62,101 @@ document.addEventListener('click', function(e) {
     closeMenu();
   }
 });
+
+/* ===== TESTIMONIALS CAROUSEL ===== */
+(function() {
+  var track, slides, current, total, autoTimer, slidesPerView;
+
+  function getSlidesPerView() {
+    if (window.innerWidth >= 900) return 3;
+    if (window.innerWidth >= 600) return 2;
+    return 1;
+  }
+
+  function buildDots() {
+    var dotsContainer = document.getElementById('carouselDots');
+    if (!dotsContainer) return;
+    dotsContainer.innerHTML = '';
+    var numDots = total - slidesPerView + 1;
+    if (numDots < 1) numDots = 1;
+    for (var i = 0; i < numDots; i++) {
+      (function(idx) {
+        var dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (idx === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Go to review ' + (idx + 1));
+        dot.addEventListener('click', function() { goTo(idx); startAuto(); });
+        dotsContainer.appendChild(dot);
+      })(i);
+    }
+  }
+
+  function applySlideWidths() {
+    slidesPerView = getSlidesPerView();
+    var pct = 100 / slidesPerView;
+    slides.forEach(function(s) { s.style.minWidth = pct + '%'; });
+  }
+
+  function goTo(idx, instant) {
+    slidesPerView = getSlidesPerView();
+    var maxIdx = total - slidesPerView;
+    if (maxIdx < 0) maxIdx = 0;
+    if (idx < 0) idx = maxIdx;
+    if (idx > maxIdx) idx = 0;
+    current = idx;
+
+    var offset = -(100 / slidesPerView) * current;
+    track.style.transition = instant ? 'none' : 'transform .5s cubic-bezier(.4,0,.2,1)';
+    track.style.transform = 'translateX(' + offset + '%)';
+
+    var dotsContainer = document.getElementById('carouselDots');
+    if (dotsContainer) {
+      dotsContainer.querySelectorAll('.carousel-dot').forEach(function(d, i) {
+        d.classList.toggle('active', i === current);
+      });
+    }
+  }
+
+  function startAuto() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(function() { goTo(current + 1); }, 4500);
+  }
+
+  function initCarousel() {
+    track = document.getElementById('reviewsTrack');
+    if (!track) return;
+    slides = track.querySelectorAll('.review-slide');
+    total = slides.length;
+    current = 0;
+    slidesPerView = getSlidesPerView();
+    applySlideWidths();
+    buildDots();
+    goTo(0, true);
+    startAuto();
+  }
+
+  window.carouselMove = function(dir) {
+    goTo(current + dir);
+    startAuto();
+  };
+
+  // Re-init on resize
+  var resizeTimer, lastSpv;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      var newSpv = getSlidesPerView();
+      if (newSpv !== lastSpv) {
+        lastSpv = newSpv;
+        applySlideWidths();
+        buildDots();
+        goTo(current, true);
+      }
+    }, 200);
+  });
+
+  // Carousel lives on the homepage — init on DOMContentLoaded
+  document.addEventListener('DOMContentLoaded', function() {
+    lastSpv = getSlidesPerView();
+    initCarousel();
+  });
+})();

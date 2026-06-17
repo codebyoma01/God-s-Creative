@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>God's Creative Events – Event Planning, Decoration & Catering in Aba & Umuahia | God's Creative Kitchen</title>
 <meta name="description" content="God's Creative Events offers premium event planning, decoration, coordination and catering in Aba and Umuahia. Food delivery, food trays, small chops, corporate catering and Nigerian cuisine powered by God's Creative Kitchen.">
-<meta name="keywords" content="Catering Services in Aba, Catering Services in Umuahia, Food Delivery in Aba, Food Delivery in Umuahia, Event Catering, Nigerian Catering, Wedding Catering, Corporate Catering, Food Trays, Small Chops, Online Food Delivery, Event Planning Aba, Event Decoration Umuahia">
+<meta name="keywords" content="Catering Services in Aba, Catering Services in Umuahia, Food Delivery in Aba, Food Delivery in Umuahia, Event Catering, Nigerian Catering, Wedding Catering, Corporate Catering, Food Trays, Small Chops, Online Food Delivery, Event Planning Aba, Event Decoration Umuahia, Cocktail Bar Aba, Cocktail Catering Nigeria">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="images/logo.png">
 <link rel="apple-touch-icon" href="images/logo.png">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style-additions.css">
 </head>
 <body>
 
@@ -79,7 +80,7 @@
       </div>
       <div class="trust-item">
         <h3>Everyday Home Orders</h3>
-        <p>No event needed  order a single plate, a family meal, or a small chops tray any day of the week.</p>
+        <p>No event needed. Order a single plate, a family meal, or a small chops tray any day of the week.</p>
       </div>
       <div class="trust-item">
         <h3>Food Delivery</h3>
@@ -98,7 +99,7 @@
       <div class="section-header">
         <span class="eyebrow">What We Do</span>
         <h2>Events We Specialise In</h2>
-        <p>Whether intimate gatherings or grand celebrations, we deliver exceptional planning, catering, and event experiences across Aba, Umuahia and beyond.</p>
+        <p>Whether intimate gatherings or grand celebrations, we deliver exceptional planning, catering and event experiences across Aba, Umuahia and beyond.</p>
         <div class="ornament"></div>
       </div>
       <div class="events-grid">
@@ -164,7 +165,7 @@
   </section>
 
   <!-- ORDER FOR DELIVERY SECTION -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="section-inner">
       <div class="section-header">
         <span class="eyebrow">God's Creative Kitchen</span>
@@ -220,7 +221,7 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
+  <!-- TESTIMONIALS CAROUSEL (HOME) -->
   <section class="section section-alt">
     <div class="section-inner">
       <div class="section-header">
@@ -229,32 +230,99 @@
         <p>Real stories from real people who trusted us with their most important moments.</p>
         <div class="ornament"></div>
       </div>
-      <div class="testi-grid">
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <blockquote>"God's Creative Events made our wedding in Umuahia absolutely breathtaking. The jollof rice by God's Creative Kitchen was the talk of the entire reception  every guest came back for seconds!"</blockquote>
-          <div class="testi-author">
-            <div class="testi-avatar">AN</div>
-            <div class="testi-info"><strong>Amaka Nwosu</strong><span>Wedding · Umuahia</span></div>
-          </div>
+
+      <div class="reviews-carousel-outer">
+        <button class="carousel-btn carousel-prev" onclick="carouselMove(-1)" aria-label="Previous review">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="carousel-btn carousel-next" onclick="carouselMove(1)" aria-label="Next review">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        <div class="reviews-carousel-wrapper">
+          <div class="reviews-track" id="reviewsTrack">
+
+            <div class="review-slide">
+              <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <blockquote>"God's Creative Events made our wedding in Umuahia absolutely breathtaking. The jollof rice by God's Creative Kitchen was the talk of the entire reception  every guest came back for seconds!"</blockquote>
+                <div class="testi-author">
+                  <div class="testi-avatar">AN</div>
+                  <div class="testi-info"><strong>Amaka Nwosu</strong><span>Wedding · Umuahia</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-slide">
+              <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <blockquote>"The small chops trays at my daughter's birthday were incredible  perfectly arranged, generously filled, and served on time. I also order their family packs every week now!"</blockquote>
+                <div class="testi-author">
+                  <div class="testi-avatar">CO</div>
+                  <div class="testi-info"><strong>Chioma Okafor</strong><span>Birthday &amp; Regular Customer · Aba</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-slide">
+              <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <blockquote>"They travelled to Enugu for our traditional ceremony and delivered everything flawlessly. The afang soup and native rice were absolutely authentic. God's Creative Kitchen is the best!"</blockquote>
+                <div class="testi-author">
+                  <div class="testi-avatar">EE</div>
+                  <div class="testi-info"><strong>Emmanuel Eze</strong><span>Traditional Ceremony · Enugu</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-slide">
+              <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <blockquote>"We hired them for our company's annual dinner in Aba and everything was seamless. The food catering was professional from start to finish and every guest was thoroughly impressed with the service."</blockquote>
+                <div class="testi-author">
+                  <div class="testi-avatar">OA</div>
+                  <div class="testi-info"><strong>Obiageli Ananwu</strong><span>Corporate Event · Aba</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-slide">
+              <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <blockquote>"I've been ordering family meal packs from God's Creative Kitchen every Friday for over six months. The egusi soup and fried rice are consistently delicious  just like home cooking. Delivery is always prompt too!"</blockquote>
+                <div class="testi-author">
+                  <div class="testi-avatar">NK</div>
+                  <div class="testi-info"><strong>Nkechi Kalu</strong><span>Regular Customer · Umuahia</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-slide">
+              <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <blockquote>"The decoration for my son's naming ceremony was beyond what I imagined. Every detail was carefully thought through  the colour scheme, the centrepieces, the welcome area. Our guests were genuinely impressed!"</blockquote>
+                <div class="testi-author">
+                  <div class="testi-avatar">FM</div>
+                  <div class="testi-info"><strong>Funmi Madueke</strong><span>Naming Ceremony · Aba</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-slide">
+              <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <blockquote>"Booked them for our office conference lunch in Umuahia and everyone loved the food. The service was professional, quantities were generous, and they cleaned up beautifully after. Will definitely use again!"</blockquote>
+                <div class="testi-author">
+                  <div class="testi-avatar">CI</div>
+                  <div class="testi-info"><strong>Chukwuemeka Iroha</strong><span>Corporate Lunch · Umuahia</span></div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /reviews-track -->
         </div>
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <blockquote>"The small chops trays at my daughter's birthday were incredible  perfectly arranged, generously filled, and served on time. I also order their family packs every week now!"</blockquote>
-          <div class="testi-author">
-            <div class="testi-avatar">CO</div>
-            <div class="testi-info"><strong>Chioma Okafor</strong><span>Birthday &amp; Regular Customer · Aba</span></div>
-          </div>
-        </div>
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <blockquote>"They travelled to Enugu for our traditional ceremony and delivered everything flawlessly. The afang soup and native rice were absolutely authentic. God's Creative Kitchen is the best!"</blockquote>
-          <div class="testi-author">
-            <div class="testi-avatar">EE</div>
-            <div class="testi-info"><strong>Emmanuel Eze</strong><span>Traditional Ceremony · Enugu</span></div>
-          </div>
-        </div>
+        <div class="carousel-dots" id="carouselDots"></div>
       </div>
+
     </div>
   </section>
 
@@ -276,7 +344,7 @@
   <div class="page-hero">
     <span class="eyebrow" style="color:var(--orange)">Our Story</span>
     <h1>About God's Creative Events</h1>
-    <p>Passionate event planners, decorators and caterers from the heart of Southeast Nigeria  dedicated to turning your vision into beautiful reality.</p>
+    <p>Passionate event planners, decorators and caterers from the heart of  Nigeria  dedicated to turning your vision into beautiful reality.</p>
     <div class="ornament"></div>
   </div>
   <section class="section section-alt">
@@ -301,11 +369,11 @@
       <div class="mv-grid">
         <div class="mv-card mission">
           <h3>Our Mission</h3>
-          <p>To deliver exceptional event planning, decoration and catering services rooted in authentic Nigerian culture  combining professional excellence with warm, personal service that makes every event uniquely memorable for our clients and their guests.</p>
+          <p>To deliver exceptional event planning, decoration and catering rooted in authentic Nigerian culture  combining professional excellence with warm, personal service that makes every event uniquely memorable for our clients and their guests.</p>
         </div>
         <div class="mv-card vision">
           <h3>Our Vision</h3>
-          <p>To be the most trusted event planning and catering company in Southeast Nigeria  known for authenticity, creativity, reliability, and the ability to bring any vision to life with elegance and grace.</p>
+          <p>To be the most trusted event planning and catering company in  Nigeria  known for authenticity, creativity, reliability, and the ability to bring any vision to life with elegance and grace.</p>
         </div>
       </div>
     </div>
@@ -370,7 +438,7 @@
   <div class="page-hero">
     <span class="eyebrow" style="color:var(--orange)">What We Offer</span>
     <h1>Our Services</h1>
-    <p>Premium event planning &amp; decoration by God's Creative Events  authentic Nigerian catering &amp; food delivery by God's Creative Kitchen.</p>
+    <p>Premium event planning &amp; decoration by God's Creative Events. Authentic Nigerian catering &amp; food delivery by God's Creative Kitchen.</p>
     <div class="ornament"></div>
   </div>
 
@@ -381,7 +449,7 @@
       <div class="division-header">
         <div class="division-label events-label">God's Creative Events</div>
         <h2>Event Planning &amp; Decoration</h2>
-        <p>Professional planning, styling and coordination for every type of event in Aba, Umuahia and across Southeast Nigeria.</p>
+        <p>Professional planning, styling and coordination for every type of event in Aba, Umuahia and across Nigeria.</p>
       </div>
       <div class="svc-page-grid" style="margin-bottom:3rem">
 
@@ -540,8 +608,9 @@
       <div class="tab-bar" id="menuTabBar">
         <button class="tab-btn active" onclick="switchMenuTab('rice',this)">Rice Dishes</button>
         <button class="tab-btn" onclick="switchMenuTab('soups',this)">Soups</button>
-        <button class="tab-btn" onclick="switchMenuTab('traditional',this)">Traditional Meals</button>
         <button class="tab-btn" onclick="switchMenuTab('proteins',this)">Proteins</button>
+        <button class="tab-btn" onclick="switchMenuTab('cocktails',this)">Cocktails</button>
+        <button class="tab-btn" onclick="switchMenuTab('traditional',this)">Traditional Meals</button>
         <button class="tab-btn" onclick="switchMenuTab('extras',this)">Sauces &amp; Extras</button>
       </div>
 
@@ -613,7 +682,7 @@
         </div>
         <div class="food-card">
           <div class="food-img"><img src="images/menu/okra-soup.jpg" alt="Okro Soup Nigerian"></div>
-          <div class="food-body"><h4>Okro Soup</h4><p>Light, comforting chicken soup with fresh vegetables  perfect for any time of day</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Chicken%20Soup." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+          <div class="food-body"><h4>Okro Soup</h4><p>Light, comforting okro soup with fresh vegetables  perfect for any time of day</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Okro%20Soup." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
         </div>
         <div class="food-card">
           <div class="food-img"><img src="images/menu/pepper-meat.jpg" alt="Pepper Soup Nigerian Spicy"></div>
@@ -647,7 +716,17 @@
           <div class="food-img"><img src="images/menu/Garri.jpg" alt="Garri with Soup Nigerian"></div>
           <div class="food-body"><h4>Garri (with Soup)</h4><p>Smooth garri swallow served alongside your choice of our fresh Nigerian soups</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Garri%20with%20Soup." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
         </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/ukwa.jpg" alt="Garri with Soup Nigerian"></div>
+          <div class="food-body"><h4>Ukwa (African Breadfruit)</h4><p>Delicious African breadfruit cooked with fish, spices and palm oil for a rich traditional taste.</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Garri%20with%20Soup." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/Abacha.jpg" alt="Garri with Soup Nigerian"></div>
+          <div class="food-body"><h4>Abacha (African Salad)</h4><p>Authentic Eastern Nigerian delicacy prepared with abacha, ugba, fish, kpomo and traditional spices.</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Garri%20with%20Soup." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+
       </div>
+      
 
       <!-- PROTEINS -->
       <div class="cat-section food-grid" id="menu-proteins">
@@ -678,6 +757,34 @@
         <div class="food-card">
           <div class="food-img"><img src="images/menu/turkey.jpg" alt="Turkey Nigerian Event Catering"></div>
           <div class="food-body"><h4>Turkey</h4><p>Premium event turkey  perfectly marinated and grilled to golden perfection</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Turkey." class="btn btn-wa" target="_blank">Order on WhatsApp</a></div>
+        </div>
+      </div>
+
+      <!-- COCKTAILS -->
+      <div class="cat-section food-grid" id="menu-cocktails">
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/cocktail-classic.jpg" alt="Classic Cocktails Event Nigeria"></div>
+          <div class="food-body"><h4>Classic Cocktails</h4><p>Gin &amp; tonic, mojito, cosmopolitan, margarita and more  beautifully crafted by our mixologists</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Cocktail%20services%20for%20my%20event." class="btn btn-wa" target="_blank">Enquire on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/cocktail-signature.jpg" alt="Signature Cocktails Custom Event Nigeria"></div>
+          <div class="food-body"><h4>Signature Cocktails</h4><p>Custom cocktails designed around your event theme, colour palette and brand</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20create%20Signature%20Cocktails%20for%20my%20event." class="btn btn-wa" target="_blank">Enquire on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/cocktail-mocktail.jpg" alt="Mocktails Virgin Drinks Nigeria"></div>
+          <div class="food-body"><h4>Mocktails &amp; Virgin Drinks</h4><p>Tropical, fruity and refreshing non-alcoholic mocktails for all guests including children</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20order%20Mocktails%20for%20my%20event." class="btn btn-wa" target="_blank">Enquire on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/cocktail-welcome.jpg" alt="Welcome Drinks Reception Service Nigeria"></div>
+          <div class="food-body"><h4>Welcome Drinks &amp; Reception</h4><p>Elegant welcome drinks service at the entrance or reception of your event</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20book%20a%20Welcome%20Drinks%20service%20for%20my%20event." class="btn btn-wa" target="_blank">Enquire on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/cocktail-wine.jpg" alt="Wine Champagne Service Event Nigeria"></div>
+          <div class="food-body"><h4>Wine &amp; Champagne Service</h4><p>Table wine, champagne toast and sparkling drinks service for corporate and wedding events</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20book%20Wine%20and%20Champagne%20service." class="btn btn-wa" target="_blank">Enquire on WhatsApp</a></div>
+        </div>
+        <div class="food-card">
+          <div class="food-img"><img src="images/menu/cocktail-bar.jpg" alt="Full Cocktail Bar Setup Event Nigeria"></div>
+          <div class="food-body"><h4>Full Cocktail Bar Setup</h4><p>Fully branded, elegantly designed bar stations staffed by professional mixologists for your event</p><a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20book%20a%20full%20Cocktail%20Bar%20Setup%20for%20my%20event." class="btn btn-wa" target="_blank">Book Bar Setup</a></div>
         </div>
       </div>
 
@@ -798,6 +905,7 @@
               <option>Traditional Ceremony</option>
               <option>Event Decoration Only</option>
               <option>Event Catering Only</option>
+              <option>Cocktail Bar &amp; Drinks Service</option>
               <option>Food Delivery Order</option>
               <option>Food Trays / Small Chops</option>
               <option>Family Meal Pack</option>
@@ -807,6 +915,25 @@
           </div>
           <div class="form-group"><label>Your Message</label><textarea id="cf-message" placeholder="Tell us about your event or food order — date, location, number of guests or portions, and any special requirements..."></textarea></div>
           <button class="btn btn-wa" style="width:100%;font-size:.9rem;padding:.9rem" onclick="sendToWhatsApp()">Send via WhatsApp</button>
+
+          <!-- SOCIAL MEDIA -->
+          <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)">
+            <p style="font-size:.8rem;color:var(--text-muted);margin-bottom:.75rem;font-weight:500">Follow us on social media</p>
+            <div class="social-connect-row">
+              <div class="social-icons social-icons-light">
+                <a href="https://instagram.com/" target="_blank" class="social-icon" aria-label="Instagram" title="Follow us on Instagram">
+                  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://tiktok.com/" target="_blank" class="social-icon" aria-label="TikTok" title="Follow us on TikTok">
+                  <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.77 1.52V6.76a4.85 4.85 0 01-1-.07z"/></svg>
+                </a>
+                <a href="https://facebook.com/" target="_blank" class="social-icon" aria-label="Facebook" title="Follow us on Facebook">
+                  <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+              </div>
+              <span>@godscreativeevents</span>
+            </div>
+          </div>
         </div>
         <div>
           <div class="contact-info-card">
@@ -835,6 +962,19 @@
           <div class="wa-card">
             <p>The fastest way to reach us is on WhatsApp  whether you're booking an event or placing a food order with God's Creative Kitchen.</p>
             <a href="https://wa.me/2348065084101?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20God%27s%20Creative%20Events." class="btn btn-wa" target="_blank">Chat on WhatsApp Now</a>
+            <!-- SOCIAL UNDER WA CARD -->
+            <div class="footer-social-row" style="justify-content:center;margin-top:1.25rem">
+              <span>Follow us</span>
+              <a href="https://instagram.com/" target="_blank" class="social-icon" aria-label="Instagram">
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://tiktok.com/" target="_blank" class="social-icon" aria-label="TikTok">
+                <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.77 1.52V6.76a4.85 4.85 0 01-1-.07z"/></svg>
+              </a>
+              <a href="https://facebook.com/" target="_blank" class="social-icon" aria-label="Facebook">
+                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -851,6 +991,19 @@
         <div style="font-size:.7rem;color:var(--orange);margin-bottom:.2rem;text-transform:uppercase;letter-spacing:.08em;font-weight:600">Event Planning &bull; Decoration &bull; Catering</div>
         <div style="font-size:.7rem;color:rgba(255,255,255,.45);margin-bottom:.75rem;letter-spacing:.03em">Powered by <span style="color:var(--orange);font-weight:600">God's Creative Kitchen</span>  Premium Nigerian Catering &amp; Food Delivery</div>
         <p>Creating beautiful, memorable events across Aba, Umuahia, and beyond. Authentic Nigerian catering and food delivery through God's Creative Kitchen  delivered with heart.</p>
+        <!-- FOOTER SOCIAL ICONS -->
+        <div class="footer-social-row">
+          <span>Follow Us</span>
+          <a href="https://www.instagram.com/gods_creative_events?igsh=MWoxNWdiZzNrdHRvaA%3D%3D&utm_source=qr" target="_blank" class="social-icon" aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://tiktok.com/" target="_blank" class="social-icon" aria-label="TikTok" title="TikTok">
+            <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.77 1.52V6.76a4.85 4.85 0 01-1-.07z"/></svg>
+          </a>
+          <a href="https://facebook.com/" target="_blank" class="social-icon" aria-label="Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
       </div>
       <div class="footer-col">
         <h4>Our Services</h4>
