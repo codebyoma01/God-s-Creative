@@ -1,3 +1,12 @@
+/* ============================================================
+   PREMIUM POLISH LAYER
+   Adds: scroll reveal animations, image reveal effects, refined
+   hover states, sticky nav shadow, gallery motion, mobile fixes,
+   smooth scrolling, and a rotating Ken-Burns hero background.
+   Does NOT change colors, fonts, layout, spacing, or content —
+   purely additive motion/interaction polish.
+   ============================================================ */
+
 /* ---- Smooth scrolling (in case it's ever overridden) ---- */
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
@@ -16,6 +25,43 @@ html { scroll-behavior: smooth; }
 }
 .nav.is-scrolled {
   box-shadow: 0 4px 24px rgba(11,42,99,.08);
+}
+
+/* ============================================================
+   HERO ROTATING BACKGROUND (Ken Burns zoom/pan + crossfade)
+   ============================================================ */
+.hero-bg{
+  position:absolute;inset:0;
+  background:none; /* replaces old single-image background */
+}
+.hero-slide{
+  position:absolute;inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  animation:heroFade 20s infinite, heroZoom 20s infinite;
+  transform-origin:center center;
+}
+.hero-slide:nth-child(1){animation-delay:0s}
+.hero-slide:nth-child(2){animation-delay:5s}
+.hero-slide:nth-child(3){animation-delay:10s}
+.hero-slide:nth-child(4){animation-delay:15s}
+
+@keyframes heroFade{
+  0%{opacity:0}
+  3%{opacity:1}
+  22%{opacity:1}
+  28%{opacity:0}
+  100%{opacity:0}
+}
+
+@keyframes heroZoom{
+  0%{transform:scale(1) translate(0,0)}
+  100%{transform:scale(1.12) translate(-1.5%,-1.5%)}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .hero-slide{animation:none;opacity:1;transform:none}
 }
 
 /* ---- Scroll-reveal base classes (toggled by JS via IntersectionObserver) ---- */
